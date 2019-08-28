@@ -15,8 +15,8 @@ module "shared-vpc" {
   }
 
   service_networks = {
-    "demoserviceproject0" = "${module.network.staging_subnetwork}"
-    "demoserviceproject1" = "${module.network.prod_subnetwork}"
+    "demoserviceproject0" = "${module.staging_subnetwork.subnetwork}"
+    "demoserviceproject1" = "${module.prod_subnetwork.subnetwork}"
   }
 }
 ```
